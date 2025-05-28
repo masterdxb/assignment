@@ -4,6 +4,7 @@ import { NumberInput } from './components/NumberInput';
 import { Slider } from './components/Slider';
 import { Button } from './components/Button';
 import styles from './App.module.scss';
+import deleteIcon from './assets/delete.png'; 
 
 const App = () => {
   const [name, setName] = useState('');
@@ -30,7 +31,7 @@ const App = () => {
           </div>
         </div>
         <div className={styles.actions}>
-          <Button variant="outlined" color="secondary" onPress={handleClear}>🗑 Clear</Button>
+          <Button variant="outlined" color="secondary" onPress={handleClear}><img src={deleteIcon}/> Clear</Button>
           <Button variant="contained" color="primary" onPress={handleSubmit}>Submit</Button>
         </div>
       </fieldset>
